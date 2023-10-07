@@ -1,0 +1,85 @@
+.instructions {
+	text-align: center;
+}
+
+.button {
+	background: #4e6afc;
+	border: none;
+	border-radius: 0.25rem;
+	color: white;
+	display: inline-block;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 1.5rem;
+	line-height: 1.45;
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+}
+
+.error {
+	animation: shake 100ms linear alternate 3;
+	background: #fc4f72;
+	transition: background 100ms linear;
+}
+
+@keyframes shake {
+	from {
+		rotate: -2deg;
+	}
+
+	to {
+		rotate: 2deg;
+	}
+}
+
+.answers {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: none;
+	margin: 1rem 0 0;
+	padding: 0;
+}
+
+.answer {
+	align-items: center;
+	background: #f4c1fc;
+	border: none;
+	border-radius: 1rem;
+	cursor: grab;
+	display: flex;
+	font-size: 1.25rem;
+	gap: 1rem;
+	padding: 1rem;
+	position: relative;
+	user-select: none;
+	z-index: 1;
+
+	& img {
+		display: block;
+		max-width: 90px;
+	}
+
+	&:active {
+		cursor: grabbing;
+		z-index: 100;
+	}
+}
+
+@keyframes drop-zone {
+	from {
+		box-shadow: 0 0 0 0 #fdab4fff;
+	}
+	to {
+		box-shadow: 0 0 0 2rem #fdab4f00;
+	}
+}
+
+.over {
+	outline: 2px dashed #e54efd;
+	z-index: 10;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: drop-zone 800ms ease-out infinite;
+	}
+}

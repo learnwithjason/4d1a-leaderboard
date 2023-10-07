@@ -1,16 +1,11 @@
 import { defineSchema, defineTable } from 'convex/server';
 import { v } from 'convex/values';
 
-export const UserSchema = {
-	id: v.string(), // should map to Clerk
+export const ScoresSchema = {
 	username: v.string(),
+	time: v.number(),
 };
 
 export default defineSchema({
-	users: defineTable(UserSchema),
-	scores: defineTable({
-		id: v.string(),
-		user_id: v.id('users'),
-		time: v.number(),
-	}),
+	scores: defineTable(ScoresSchema).index('by_time', ['time']),
 });

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/default.astro';
+import { Leaderboard as App } from '../components/leaderboard';
+---
+
+<Layout>
+	<h1>The List Game Leaderboard</h1>
+	<p>
+		We made procrastination competitive! See if you can procrastinate faster
+		than anyone else.
+	</p>
+	<App client:only />
+</Layout>

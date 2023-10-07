@@ -2,7 +2,7 @@
 
 Like one of those games where you do chores for points, but there are no cool graphics or a good storyline. You're just doing meaningless internet research to avoid having to do the actually important stuff on your todo list that you've been dreading.
 
-Play: https://list-game.netlify.app
+Play: https://the-list-game.netlify.app
 
 ## Built With
 
